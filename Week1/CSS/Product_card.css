@@ -1,0 +1,184 @@
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%;
+    overflow-x: auto;
+    background: linear-gradient(45deg, #43e97b, #38f9d7); /* Gradient background */
+    animation: gradientAnimation 10s ease infinite alternate; /* Animation for gradient */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.product-card {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    cursor: pointer;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    overflow: hidden;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); /* Gradient background */
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    border-color: #007BFF;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.product-card .product-image {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    overflow: hidden;
+}
+
+.product-card img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px 10px 0 0;
+    display: block;
+    transition: transform 0.3s ease-out;
+}
+
+.product-card:hover img {
+    transform: scale(1.1);
+}
+
+.product-card .discount-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 0.8em;
+    font-weight: bold;
+    transition: transform 0.3s ease-out;
+}
+
+.product-card:hover .discount-badge {
+    transform: scale(1.1);
+}
+
+.product-card .product-category {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-card h3 {
+    margin: 15px 0 10px;
+}
+
+.product-card .product-info {
+    padding: 10px 20px;
+}
+
+.product-card .ratings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.product-card .ratings .rating-star {
+    color: yellow;
+    font-size: 1.2em;
+    margin-right: 3px;
+    position: relative; /* Position relative for pseudo-element positioning */
+}
+
+.product-card .description {
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-card .more-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-out;
+}
+
+.product-card .more-info.active {
+    transform: translateY(0);
+}
+
+.product-card .view-details-btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.product-card .view-details-btn:hover {
+    background-color: #0056b3;
+}
+
+.product-card .add-to-cart-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.product-card .add-to-cart-btn:hover {
+    background-color: #218838;
+}
+
+.product-card .specifications {
+    display: none;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.product-card.show-specs .specifications {
+    display: block;
+}
+
+/* Accessibility */
+:focus {
+    outline: 2px solid #007BFF;
+    outline-offset: 2px;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Distance Converter</title>
+    <link rel="stylesheet" href="../CSS/DistanceConverter.css">
+</head>
+<body>
+    <div class="container">
+        <h1>The Distance Converter</h1>
+        <div class="converter">
+            <div class="conversion-panel">
+                <h2>Meters to Feet</h2>
+                <div class="input-container">
+                    <input type="number" id="metersInput" placeholder="Enter meters">
+                    <button onclick="convertMetersToFeet()">Convert</button>
+                </div>
+                <p id="metersResult"></p>
+            </div>
+            <div class="conversion-panel">
+                <h2>Feet to Meters</h2>
+                <div class="input-container">
+                    <input type="number" id="feetInput" placeholder="Enter feet">
+                    <button onclick="convertFeetToMeters()">Convert</button>
+                </div>
+                <p id="feetResult"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../JS/DistanceConverter.js"></script>
+</body>
+</html>

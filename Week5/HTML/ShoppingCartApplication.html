@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="../CSS/ShoppingCartApplication.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">ShopLogo</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <div class="cart-icon" id="cartIcon">
+                🛒 <span id="cartCount">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="product-section">
+    <h1>Our Products</h1>
+    <div class="product-list">
+        <!-- Existing Product -->
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/81gOFlzopdL._SX679_.jpg" alt="F1 24">
+            <h3>F1 24</h3>
+            <p>$29.99</p>
+            <button class="add-to-cart" data-product="1">Add to Cart</button>
+        </div>
+        <!-- New Products -->
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/71QP4ZcgynL._SY879_.jpg" alt="Gran Turismo 7">
+            <h3>Gran Turismo 7</h3>
+            <p>$49.99</p>
+            <button class="add-to-cart" data-product="2">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/51v8uu9HQbL._SX300_SY300_QL70_FMwebp_.jpg" alt="FC 24">
+            <h3>FC 24</h3>
+            <p>$19.99</p>
+            <button class="add-to-cart" data-product="3">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/613lyxBIXoL._SX679_.jpg" alt="God Of War Ragnarok">
+            <h3>God Of War Ragnarok</h3>
+            <p>$39.99</p>
+            <button class="add-to-cart" data-product="4">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/61KXzwaghhL._SX679_.jpg" alt="THE LAST OF US 2">
+            <h3>THE LAST OF US 2</h3>
+            <p>$59.99</p>
+            <button class="add-to-cart" data-product="5">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+    <section class="cart-section hidden" id="cartSection">
+        <h2>Your Cart</h2>
+        <div id="cartItems">
+            <!-- Cart items will be added here dynamically -->
+        </div>
+        <div class="cart-summary">
+            <span>Total:</span>
+            <span id="totalCost">$0.00</span>
+        </div>
+        <button id="checkoutButton" class="confirm-button">Checkout</button>
+    </section>
+
+    <script src="../JS/ShoppingCartApplication.js"></script>
+</body>
+</html>

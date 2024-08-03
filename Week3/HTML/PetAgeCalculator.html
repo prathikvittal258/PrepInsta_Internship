@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Age Calculator</title>
+    <link rel="stylesheet" href="../CSS/PetAgeCalculator.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pet Age Calculator</h1>
+        <div class="calculator">
+            <label for="petAge">Enter your pet's age (in human years):</label>
+            <input type="number" id="petAge" min="1" required>
+            
+            <label for="conversionRate">Enter the conversion rate (human years to pet years):</label>
+            <input type="number" id="conversionRate" min="1" value="7" required>
+            
+            <button onclick="calculatePetAge()">Calculate</button>
+            
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script src="../JS/PetAgeCalculator.js"></script>
+</body>
+</html>

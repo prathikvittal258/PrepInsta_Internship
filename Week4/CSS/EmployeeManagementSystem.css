@@ -1,0 +1,201 @@
+        :root {
+            --background-gradient: linear-gradient(to right, #a1c4fd, #c2e9fb);
+            --button-gradient: linear-gradient(to right, #ff7e5f, #feb47b);
+            --update-button-gradient: linear-gradient(to right, #34d399, #10b981);
+            --delete-button-gradient: linear-gradient(to right, #f56565, #e53e3e);
+            --add-button-gradient: linear-gradient(to right, #38a169, #2f855a);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--background-gradient);
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #333;
+            /* Solid color for text */
+            text-align: center;
+        }
+
+        button {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: var(--button-gradient);
+            color: #fff;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background: var(--button-gradient);
+        }
+
+        button.delete {
+            background: var(--delete-button-gradient);
+        }
+
+        button.delete:hover {
+            background: var(--delete-button-gradient);
+        }
+
+        button.update {
+            background: var(--update-button-gradient);
+        }
+
+        button.update:hover {
+            background: var(--update-button-gradient);
+        }
+
+        button.calculate {
+            background: var(--button-gradient);
+        }
+
+        button.calculate:hover {
+            background: var(--button-gradient);
+        }
+
+        button.add {
+            background: var(--add-button-gradient);
+        }
+
+        button.add:hover {
+            background: var(--add-button-gradient);
+        }
+
+        button.cancel {
+            background: #f56565;
+            /* Red color for cancel button */
+            color: #fff;
+        }
+
+        button.cancel:hover {
+            background: #e53e3e;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            /* Gradient background */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f56b2a;
+            /* Orange color for header */
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #ffe5e5;
+            /* Light pink for even rows */
+        }
+
+        tr:nth-child(odd) {
+            background-color: #fff;
+            /* White for odd rows */
+        }
+
+        tr:hover {
+            background-color: #f1c6c6;
+            /* Light red for hover effect */
+        }
+
+        input,
+        select {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: calc(50% - 22px);
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .update-form,
+        .add-form {
+            display: none;
+            margin-top: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .update-form input,
+        .add-form input {
+            width: 80%;
+            margin-bottom: 10px;
+            display: block;
+            margin: 10px auto;
+        }
+
+        .update-form h2,
+        .add-form h2 {
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .update-form .actions,
+        .add-form .actions {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        @media (max-width: 600px) {
+            button {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            input,
+            select {
+                width: 100%;
+            }
+        }

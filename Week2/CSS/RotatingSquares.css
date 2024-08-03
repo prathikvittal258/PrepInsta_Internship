@@ -1,0 +1,67 @@
+.loading {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.loading .lds-cube {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    transform: translate(-60px, -60px) scale(1) translate(60px, 60px);
+}
+
+.loading .lds-cube div {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #1976d2;
+    animation: lds-cube 1s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.loading .lds-cube div:nth-child(1) {
+    top: 10px;
+    left: 10px;
+    animation-delay: -0.3s;
+}
+
+.loading .lds-cube div:nth-child(2) {
+    top: 10px;
+    left: 70px;
+    background: #2196f3;
+    animation-delay: -0.2s;
+}
+
+.loading .lds-cube div:nth-child(3) {
+    top: 70px;
+    left: 70px;
+    background: #64b5f6;
+    animation-delay: 0s;
+}
+
+.loading .lds-cube div:nth-child(4) {
+    top: 70px;
+    left: 10px;
+    background: #bbdefb;
+    animation-delay: -0.1s;
+}
+
+@keyframes lds-cube {
+
+    0%,
+    70%,
+    100% {
+        transform: scale(1.4);
+    }
+
+    35% {
+        transform: scale(0.4);
+    }
+}

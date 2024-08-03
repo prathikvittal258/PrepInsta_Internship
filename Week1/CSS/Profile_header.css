@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.profile-header {
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.cover-photo img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.profile-picture {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-info {
+    margin-top: 80px;
+    padding: 20px;
+}
+
+.user-info h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.user-info .title {
+    margin: 5px 0;
+    color: #666;
+    font-style: italic;
+}
+
+.user-info .location {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.user-info .bio {
+    margin: 10px 0;
+    color: #333;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.stats div {
+    margin: 0 15px;
+    text-align: center;
+}
+
+.stats .stat-number {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.stats .stat-label {
+    color: #666;
+}
+
+.social-links {
+    margin: 10px 0;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.follow-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.follow-btn:hover {
+    background-color: #218838;
+}
+
+.edit-profile {
+    background-color: #007bff;
+    color: white;
+}
+
+.edit-profile:hover {
+    background-color: #0056b3;
+}
+
+.recent-photos {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recent-photos h2 {
+    margin-top: 0;
+}
+
+.photos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.photos-grid img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
